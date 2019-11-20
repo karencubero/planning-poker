@@ -4,6 +4,8 @@ import './vertical-scroll.css'
 
 export const VerticalScroll: React.FC<Props> = ({children}) => {
     return (
-        <div className="vertical-scroll">{children}</div>
+        <div className="vertical-scroll">
+            {children}
+        </div>
     )
 };

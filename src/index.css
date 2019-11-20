@@ -6,4 +6,8 @@ body {
     display: block;
     margin: 0px;
     background-color: #F9F8F5;
+    height: 100vh;
+}
+#root {
+    height: 100%;
 }

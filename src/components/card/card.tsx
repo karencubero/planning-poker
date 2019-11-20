@@ -4,10 +4,8 @@ import './card.css';
 
 export const Card: React.FC<Props> = ({imageUrl, imageAlt}) => {
     return (
-        <div className="card-wrapper">
-            <div className="card">
-                <img className="card-image" src={imageUrl} alt={imageAlt}/>
-            </div>
+        <div className="card">
+            <img className="card-image" src={imageUrl} alt={imageAlt}/>
         </div>
     );
 };
