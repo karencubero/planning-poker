@@ -1,4 +1,4 @@
-.vertical-scroll {
+.carousel {
     overflow-x: auto;
     white-space: nowrap;
     display: flex;

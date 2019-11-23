@@ -1,16 +1,24 @@
 .card {
-    scroll-snap-align: center;
-    min-width: 100%;
-    min-height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
 }
 
 .card-image {
-    width: 100%;
-    height: auto;
+    position: absolute;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: scale-down;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: .5rem;
+    backface-visibility: hidden;
+}
+
+.card-image-back {
+    transform: rotateY(180deg);
 }

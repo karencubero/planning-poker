@@ -1,6 +1,7 @@
 import React from 'react';
-import {VerticalScroll} from "./components/vertical-scroll";
+import {Carousel} from "./components/carousel";
 import {Card} from "./components/card";
+import {CarouselItem} from "./components/carousel-item";
 
 const cardList = [
     '1-low-hanging-fruit',
@@ -24,8 +25,12 @@ const IMAGES_FOLDER = `${process.env.PUBLIC_URL}/assets/images`;
 
 export const App: React.FC = () => {
     return (
-        <VerticalScroll>
-            {cardList.map(cardUrl => <Card imageUrl={`${IMAGES_FOLDER}/${cardUrl}.${CARD_IMAGE_EXTENSION}`}/>)}
-        </VerticalScroll>
+        <Carousel>
+            {cardList.map(cardUrl => <CarouselItem key={cardUrl}>
+                <Card
+                    imageUrl={`${IMAGES_FOLDER}/${cardUrl}.${CARD_IMAGE_EXTENSION}`}
+                    backImageUrl={`${IMAGES_FOLDER}/cover.${CARD_IMAGE_EXTENSION}`}/>
+            </CarouselItem>)}
+        </Carousel>
     );
 };
